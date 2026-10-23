@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T11:25:54.571121+00:00",
-  "published_utc": "2026-10-23T11:26:49.972239+00:00",
+  "generated_utc": "2026-10-23T11:26:54.699055+00:00",
+  "published_utc": "2026-10-23T11:27:51.494670+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -88,16 +88,16 @@
       "name": "Scalping 2.0 (Original)",
       "version": "Scalping 2.0",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 4,
       "metrics": {
-        "trades": 50,
+        "trades": 51,
         "wins": 5,
-        "losses": 45,
-        "win_rate_pct": 10.0,
-        "gross_usdt": 3.06285,
-        "fees_usdt": 29.99706,
-        "net_usdt": -26.93417,
-        "profit_factor": 0.119
+        "losses": 46,
+        "win_rate_pct": 9.8,
+        "gross_usdt": 2.44483,
+        "fees_usdt": 30.59743,
+        "net_usdt": -28.15256,
+        "profit_factor": 0.115
       }
     },
     {
