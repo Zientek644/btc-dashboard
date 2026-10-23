@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T08:55:37.350720+00:00",
-  "published_utc": "2026-10-23T08:55:49.427892+00:00",
+  "generated_utc": "2026-10-23T08:56:37.467198+00:00",
+  "published_utc": "2026-10-23T08:56:50.910154+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -86,16 +86,16 @@
       "name": "Scalping 2.0 (Original)",
       "version": "Scalping 2.0",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 4,
       "metrics": {
-        "trades": 47,
+        "trades": 48,
         "wins": 5,
-        "losses": 42,
-        "win_rate_pct": 10.64,
-        "gross_usdt": 3.42263,
-        "fees_usdt": 28.19778,
-        "net_usdt": -24.77513,
-        "profit_factor": 0.128
+        "losses": 43,
+        "win_rate_pct": 10.42,
+        "gross_usdt": 2.86658,
+        "fees_usdt": 28.79745,
+        "net_usdt": -25.93084,
+        "profit_factor": 0.123
       }
     },
     {
@@ -118,16 +118,16 @@
       "name": "Scalping: dynamisch korrigiert",
       "version": "Experiment B",
       "status": "ACTIVE_DATA",
-      "warning_count": 2,
+      "warning_count": 3,
       "metrics": {
-        "trades": 28,
+        "trades": 29,
         "wins": 6,
-        "losses": 22,
-        "win_rate_pct": 21.43,
-        "gross_usdt": -0.63398,
-        "fees_usdt": 16.80121,
-        "net_usdt": -17.43518,
-        "profit_factor": 0.154
+        "losses": 23,
+        "win_rate_pct": 20.69,
+        "gross_usdt": -1.18941,
+        "fees_usdt": 17.40088,
+        "net_usdt": -18.59028,
+        "profit_factor": 0.146
       }
     }
   ]
