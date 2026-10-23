@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T02:58:00.533812+00:00",
-  "published_utc": "2026-10-23T02:58:34.647229+00:00",
+  "generated_utc": "2026-10-23T02:59:00.627562+00:00",
+  "published_utc": "2026-10-23T02:59:36.181011+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -118,7 +118,7 @@
       "name": "Scalping: dynamisch korrigiert",
       "version": "Experiment B",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 3,
       "metrics": {
         "trades": 17,
         "wins": 4,
