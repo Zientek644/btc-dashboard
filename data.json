@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T05:31:15.520040+00:00",
-  "published_utc": "2026-10-23T05:31:26.967670+00:00",
+  "generated_utc": "2026-10-23T05:32:15.581223+00:00",
+  "published_utc": "2026-10-23T05:32:28.736307+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -86,32 +86,32 @@
       "name": "Scalping 2.0 (Original)",
       "version": "Scalping 2.0",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 4,
       "metrics": {
-        "trades": 43,
+        "trades": 44,
         "wins": 5,
-        "losses": 38,
-        "win_rate_pct": 11.63,
-        "gross_usdt": 4.27225,
-        "fees_usdt": 25.79749,
-        "net_usdt": -21.52523,
-        "profit_factor": 0.145
+        "losses": 39,
+        "win_rate_pct": 11.36,
+        "gross_usdt": 3.61232,
+        "fees_usdt": 26.39789,
+        "net_usdt": -22.78555,
+        "profit_factor": 0.138
       }
     },
     {
       "name": "Scalping: feste SL/TP",
       "version": "Experiment A",
       "status": "ACTIVE_DATA",
-      "warning_count": 1,
+      "warning_count": 2,
       "metrics": {
-        "trades": 18,
+        "trades": 19,
         "wins": 3,
-        "losses": 15,
-        "win_rate_pct": 16.67,
-        "gross_usdt": -7.79914,
-        "fees_usdt": 10.79927,
-        "net_usdt": -18.59839,
-        "profit_factor": 0.111
+        "losses": 16,
+        "win_rate_pct": 15.79,
+        "gross_usdt": -8.45968,
+        "fees_usdt": 11.39967,
+        "net_usdt": -19.85933,
+        "profit_factor": 0.105
       }
     },
     {
@@ -120,14 +120,14 @@
       "status": "ACTIVE_DATA",
       "warning_count": 3,
       "metrics": {
-        "trades": 22,
+        "trades": 23,
         "wins": 5,
-        "losses": 17,
-        "win_rate_pct": 22.73,
-        "gross_usdt": 0.11013,
-        "fees_usdt": 13.2018,
-        "net_usdt": -13.09166,
-        "profit_factor": 0.177
+        "losses": 18,
+        "win_rate_pct": 21.74,
+        "gross_usdt": -0.35108,
+        "fees_usdt": 13.80208,
+        "net_usdt": -14.15315,
+        "profit_factor": 0.166
       }
     }
   ]
