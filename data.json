@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T12:11:00.317418+00:00",
-  "published_utc": "2026-10-23T12:11:59.860957+00:00",
+  "generated_utc": "2026-10-23T12:13:00.557637+00:00",
+  "published_utc": "2026-10-23T12:13:01.481811+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -104,16 +104,16 @@
       "name": "Scalping: feste SL/TP",
       "version": "Experiment A",
       "status": "ACTIVE_DATA",
-      "warning_count": 1,
+      "warning_count": 2,
       "metrics": {
-        "trades": 27,
-        "wins": 4,
+        "trades": 28,
+        "wins": 5,
         "losses": 23,
-        "win_rate_pct": 14.81,
-        "gross_usdt": -11.2559,
-        "fees_usdt": 16.19925,
-        "net_usdt": -27.45513,
-        "profit_factor": 0.089
+        "win_rate_pct": 17.86,
+        "gross_usdt": -9.77144,
+        "fees_usdt": 16.79836,
+        "net_usdt": -26.56978,
+        "profit_factor": 0.119
       }
     },
     {
