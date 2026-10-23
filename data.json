@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T08:13:32.598928+00:00",
-  "published_utc": "2026-10-23T08:13:41.892237+00:00",
+  "generated_utc": "2026-10-23T08:14:32.714371+00:00",
+  "published_utc": "2026-10-23T08:14:43.566154+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -102,7 +102,7 @@
       "name": "Scalping: feste SL/TP",
       "version": "Experiment A",
       "status": "ACTIVE_DATA",
-      "warning_count": 2,
+      "warning_count": 1,
       "metrics": {
         "trades": 24,
         "wins": 4,
