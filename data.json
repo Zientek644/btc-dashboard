@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T20:12:05.644220+00:00",
-  "published_utc": "2026-10-23T20:12:58.751243+00:00",
+  "generated_utc": "2026-10-23T20:13:05.788637+00:00",
+  "published_utc": "2026-10-23T20:14:00.287752+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -120,16 +120,16 @@
       "name": "Scalping: dynamisch korrigiert",
       "version": "Experiment B",
       "status": "ACTIVE_DATA",
-      "warning_count": 2,
+      "warning_count": 3,
       "metrics": {
-        "trades": 46,
+        "trades": 47,
         "wins": 7,
-        "losses": 39,
-        "win_rate_pct": 15.22,
-        "gross_usdt": -5.38417,
-        "fees_usdt": 27.60008,
-        "net_usdt": -32.98424,
-        "profit_factor": 0.093
+        "losses": 40,
+        "win_rate_pct": 14.89,
+        "gross_usdt": -5.61666,
+        "fees_usdt": 28.20022,
+        "net_usdt": -33.81687,
+        "profit_factor": 0.091
       }
     }
   ]
