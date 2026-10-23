@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T02:42:59.064823+00:00",
-  "published_utc": "2026-10-23T02:43:11.547622+00:00",
+  "generated_utc": "2026-10-23T02:43:59.150520+00:00",
+  "published_utc": "2026-10-23T02:44:13.238131+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -56,7 +56,7 @@
       "name": "Momentum + Volume Spike",
       "version": "1.5.8",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 3,
       "metrics": {
         "trades": 10,
         "wins": 1,
@@ -86,16 +86,16 @@
       "name": "Scalping 2.0 (Original)",
       "version": "Scalping 2.0",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 5,
       "metrics": {
-        "trades": 37,
+        "trades": 38,
         "wins": 5,
-        "losses": 32,
-        "win_rate_pct": 13.51,
-        "gross_usdt": 5.07399,
-        "fees_usdt": 22.19647,
-        "net_usdt": -17.12246,
-        "profit_factor": 0.176
+        "losses": 33,
+        "win_rate_pct": 13.16,
+        "gross_usdt": 5.05016,
+        "fees_usdt": 22.79646,
+        "net_usdt": -17.74628,
+        "profit_factor": 0.17
       }
     },
     {
@@ -118,16 +118,16 @@
       "name": "Scalping: dynamisch korrigiert",
       "version": "Experiment B",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 4,
       "metrics": {
-        "trades": 15,
+        "trades": 16,
         "wins": 4,
-        "losses": 11,
-        "win_rate_pct": 26.67,
-        "gross_usdt": 0.76872,
-        "fees_usdt": 9.00075,
-        "net_usdt": -8.23201,
-        "profit_factor": 0.225
+        "losses": 12,
+        "win_rate_pct": 25.0,
+        "gross_usdt": 0.60378,
+        "fees_usdt": 9.60065,
+        "net_usdt": -8.99685,
+        "profit_factor": 0.209
       }
     }
   ]
