@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T14:16:15.693622+00:00",
-  "published_utc": "2026-10-23T14:16:20.986827+00:00",
+  "generated_utc": "2026-10-23T14:17:15.809671+00:00",
+  "published_utc": "2026-10-23T14:17:22.677656+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -56,16 +56,16 @@
       "name": "Momentum + Volume Spike",
       "version": "1.5.8",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 5,
       "metrics": {
-        "trades": 12,
-        "wins": 1,
+        "trades": 13,
+        "wins": 2,
         "losses": 11,
-        "win_rate_pct": 8.33,
-        "gross_usdt": -1.87888,
-        "fees_usdt": 7.19983,
-        "net_usdt": -9.07873,
-        "profit_factor": 0.09
+        "win_rate_pct": 15.38,
+        "gross_usdt": 0.23837,
+        "fees_usdt": 7.79856,
+        "net_usdt": -7.56021,
+        "profit_factor": 0.242
       }
     },
     {
