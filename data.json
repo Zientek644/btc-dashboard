@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T23:20:33.230655+00:00",
-  "published_utc": "2026-10-23T23:20:50.782556+00:00",
+  "generated_utc": "2026-10-23T23:21:33.364684+00:00",
+  "published_utc": "2026-10-23T23:21:52.348810+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
       "name": "Trendfolge",
       "version": "1.5.2",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 5,
       "metrics": {
         "trades": 11,
         "wins": 5,
