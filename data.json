@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T08:29:34.396595+00:00",
-  "published_utc": "2026-10-23T08:30:08.435404+00:00",
+  "generated_utc": "2026-10-23T08:30:34.512198+00:00",
+  "published_utc": "2026-10-23T08:31:10.144978+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -24,15 +24,15 @@
       "name": "Liquiditäts-Reversal",
       "version": "1.5.4",
       "status": "ACTIVE_DATA",
-      "warning_count": 2,
+      "warning_count": 3,
       "metrics": {
-        "trades": 3,
+        "trades": 4,
         "wins": 0,
-        "losses": 3,
+        "losses": 4,
         "win_rate_pct": 0.0,
-        "gross_usdt": -0.77302,
-        "fees_usdt": 1.7999,
-        "net_usdt": -2.57292,
+        "gross_usdt": -0.58596,
+        "fees_usdt": 2.39979,
+        "net_usdt": -2.98575,
         "profit_factor": 0.0
       }
     },
