@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-23T16:04:29.502685+00:00",
-  "published_utc": "2026-10-23T16:05:21.309902+00:00",
+  "generated_utc": "2026-10-23T16:05:29.636414+00:00",
+  "published_utc": "2026-10-23T16:06:22.970781+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -56,7 +56,7 @@
       "name": "Momentum + Volume Spike",
       "version": "1.5.8",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 3,
       "metrics": {
         "trades": 14,
         "wins": 2,
@@ -90,30 +90,30 @@
       "status": "ACTIVE_DATA",
       "warning_count": 3,
       "metrics": {
-        "trades": 59,
+        "trades": 60,
         "wins": 5,
-        "losses": 54,
-        "win_rate_pct": 8.47,
-        "gross_usdt": -1.9703,
-        "fees_usdt": 35.39763,
-        "net_usdt": -37.36789,
-        "profit_factor": 0.089
+        "losses": 55,
+        "win_rate_pct": 8.33,
+        "gross_usdt": -2.5623,
+        "fees_usdt": 35.99799,
+        "net_usdt": -38.56025,
+        "profit_factor": 0.086
       }
     },
     {
       "name": "Scalping: feste SL/TP",
       "version": "Experiment A",
       "status": "ACTIVE_DATA",
-      "warning_count": 1,
+      "warning_count": 2,
       "metrics": {
-        "trades": 31,
+        "trades": 32,
         "wins": 6,
-        "losses": 25,
-        "win_rate_pct": 19.35,
-        "gross_usdt": -9.65203,
-        "fees_usdt": 18.59947,
-        "net_usdt": -28.25148,
-        "profit_factor": 0.138
+        "losses": 26,
+        "win_rate_pct": 18.75,
+        "gross_usdt": -10.2017,
+        "fees_usdt": 19.1998,
+        "net_usdt": -29.40148,
+        "profit_factor": 0.133
       }
     },
     {
@@ -122,14 +122,14 @@
       "status": "ACTIVE_DATA",
       "warning_count": 2,
       "metrics": {
-        "trades": 39,
+        "trades": 40,
         "wins": 6,
-        "losses": 33,
-        "win_rate_pct": 15.38,
-        "gross_usdt": -5.36098,
-        "fees_usdt": 23.40095,
-        "net_usdt": -28.76192,
-        "profit_factor": 0.1
+        "losses": 34,
+        "win_rate_pct": 15.0,
+        "gross_usdt": -5.87446,
+        "fees_usdt": 24.00126,
+        "net_usdt": -29.87571,
+        "profit_factor": 0.096
       }
     }
   ]
