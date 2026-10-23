@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-23T01:50:54.274358+00:00",
+  "published_utc": "2026-10-23T01:51:51.003273+00:00",
+  "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
+  "bots": [
+    {
+      "name": "Trendfolge",
+      "version": "1.5.2",
+      "status": "ACTIVE_DATA",
+      "warning_count": 2,
+      "metrics": {
+        "trades": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate_pct": 60.0,
+        "gross_usdt": 5.35094,
+        "fees_usdt": 2.99678,
+        "net_usdt": 2.35415,
+        "profit_factor": 1.832
+      }
+    },
+    {
+      "name": "Liquiditäts-Reversal",
+      "version": "1.5.4",
+      "status": "ACTIVE_DATA",
+      "warning_count": 1,
+      "metrics": {
+        "trades": 2,
+        "wins": 0,
+        "losses": 2,
+        "win_rate_pct": 0.0,
+        "gross_usdt": -0.47361,
+        "fees_usdt": 1.19972,
+        "net_usdt": -1.67333,
+        "profit_factor": 0.0
+      }
+    },
+    {
+      "name": "Orderflow-Absorption",
+      "version": "1.5.6",
+      "status": "ACTIVE_DATA",
+      "warning_count": 3,
+      "metrics": {
+        "trades": 8,
+        "wins": 0,
+        "losses": 8,
+        "win_rate_pct": 0.0,
+        "gross_usdt": 0.38865,
+        "fees_usdt": 4.79961,
+        "net_usdt": -4.41096,
+        "profit_factor": 0.0
+      }
+    },
+    {
+      "name": "Momentum + Volume Spike",
+      "version": "1.5.8",
+      "status": "ACTIVE_DATA",
+      "warning_count": 4,
+      "metrics": {
+        "trades": 8,
+        "wins": 1,
+        "losses": 7,
+        "win_rate_pct": 12.5,
+        "gross_usdt": -1.4521,
+        "fees_usdt": 4.79981,
+        "net_usdt": -6.25192,
+        "profit_factor": 0.125
+      }
+    },
+    {
+      "name": "OI + CVD-Divergenz",
+      "version": "1.5.9",
+      "status": "ACTIVE_DATA",
+      "warning_count": 2,
+      "metrics": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "gross_usdt": 0,
+        "fees_usdt": 0,
+        "net_usdt": 0
+      }
+    },
+    {
+      "name": "Scalping 2.0 (Original)",
+      "version": "Scalping 2.0",
+      "status": "ACTIVE_DATA",
+      "warning_count": 5,
+      "metrics": {
+        "trades": 34,
+        "wins": 4,
+        "losses": 30,
+        "win_rate_pct": 11.76,
+        "gross_usdt": 5.72578,
+        "fees_usdt": 20.3964,
+        "net_usdt": -14.67059,
+        "profit_factor": 0.173
+      }
+    },
+    {
+      "name": "Scalping: feste SL/TP",
+      "version": "Experiment A",
+      "status": "ACTIVE_DATA",
+      "warning_count": 2,
+      "metrics": {
+        "trades": 10,
+        "wins": 2,
+        "losses": 8,
+        "win_rate_pct": 20.0,
+        "gross_usdt": -3.49484,
+        "fees_usdt": 5.99985,
+        "net_usdt": -9.49466,
+        "profit_factor": 0.158
+      }
+    },
+    {
+      "name": "Scalping: dynamisch korrigiert",
+      "version": "Experiment B",
+      "status": "ACTIVE_DATA",
+      "warning_count": 2,
+      "metrics": {
+        "trades": 13,
+        "wins": 3,
+        "losses": 10,
+        "win_rate_pct": 23.08,
+        "gross_usdt": -0.0217,
+        "fees_usdt": 7.79981,
+        "net_usdt": -7.8215,
+        "profit_factor": 0.188
+      }
+    }
+  ]
+}
