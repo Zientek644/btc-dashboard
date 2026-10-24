@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-24T01:13:50.389482+00:00",
-  "published_utc": "2026-10-24T01:14:45.202241+00:00",
+  "generated_utc": "2026-10-24T01:14:50.549881+00:00",
+  "published_utc": "2026-10-24T01:15:46.648602+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -88,7 +88,7 @@
       "name": "Scalping 2.0 (Original)",
       "version": "Scalping 2.0",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 3,
       "metrics": {
         "trades": 79,
         "wins": 9,
