@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-24T00:42:45.582597+00:00",
-  "published_utc": "2026-10-24T00:42:57.242349+00:00",
+  "generated_utc": "2026-10-24T00:43:45.736770+00:00",
+  "published_utc": "2026-10-24T00:43:58.859802+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
       "name": "Trendfolge",
       "version": "1.5.2",
       "status": "ACTIVE_DATA",
-      "warning_count": 4,
+      "warning_count": 5,
       "metrics": {
-        "trades": 12,
-        "wins": 5,
+        "trades": 13,
+        "wins": 6,
         "losses": 7,
-        "win_rate_pct": 41.67,
-        "gross_usdt": 2.34655,
-        "fees_usdt": 7.19576,
-        "net_usdt": -4.84922,
-        "profit_factor": 0.538
+        "win_rate_pct": 46.15,
+        "gross_usdt": 4.9552,
+        "fees_usdt": 7.79419,
+        "net_usdt": -2.839,
+        "profit_factor": 0.73
       }
     },
     {
