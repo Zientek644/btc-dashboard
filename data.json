@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-24T02:29:02.076728+00:00",
-  "published_utc": "2026-10-24T02:29:38.730354+00:00",
+  "generated_utc": "2026-10-24T02:30:02.221628+00:00",
+  "published_utc": "2026-10-24T02:30:40.299187+00:00",
   "disclaimer": "Simuliertes Paper-Trading; keine echten Orders.",
   "bots": [
     {
@@ -40,15 +40,15 @@
       "name": "Orderflow-Absorption",
       "version": "1.5.6",
       "status": "ACTIVE_DATA",
-      "warning_count": 3,
+      "warning_count": 4,
       "metrics": {
-        "trades": 10,
+        "trades": 11,
         "wins": 0,
-        "losses": 10,
+        "losses": 11,
         "win_rate_pct": 0.0,
-        "gross_usdt": 0.08579,
-        "fees_usdt": 5.99952,
-        "net_usdt": -5.91373,
+        "gross_usdt": 0.52299,
+        "fees_usdt": 6.59978,
+        "net_usdt": -6.0768,
         "profit_factor": 0.0
       }
     },
