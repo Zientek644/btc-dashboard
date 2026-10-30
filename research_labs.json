@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-30T23:11:44.836534+00:00",
+  "generated_utc": "2026-10-30T23:16:46.481454+00:00",
   "hunter": {
     "strategies": 1000,
     "trades": 3257,
@@ -7,7 +7,7 @@
     "net_usdt": -7307.3115,
     "roi_pct": -0.7307,
     "open": 350,
-    "updated_utc": "2026-10-30T23:11:25.999701+00:00",
+    "updated_utc": "2026-10-30T23:16:26.003476+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
@@ -301,7 +301,7 @@
     "net_usdt": -2804.6538,
     "roi_pct": -2.8047,
     "open": 25,
-    "updated_utc": "2026-10-30T23:11:14.414898+00:00",
+    "updated_utc": "2026-10-30T23:16:34.375053+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 40075,
-    "wins": 9325,
-    "net_usdt": -14566.8896,
-    "roi_pct": -7.2834,
-    "open": 442,
-    "updated_utc": "2026-10-30T23:10:00+00:00",
+    "trades": 40186,
+    "wins": 9340,
+    "net_usdt": -14589.2594,
+    "roi_pct": -7.2946,
+    "open": 366,
+    "updated_utc": "2026-10-30T23:15:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 24353,
-        "wins": 4360,
-        "net_usdt": -8720.6766,
-        "roi_pct": -8.7207,
-        "fees_usdt": 6416.4276,
-        "open": 143
+        "trades": 24450,
+        "wins": 4361,
+        "net_usdt": -8744.3144,
+        "roi_pct": -8.7443,
+        "fees_usdt": 6442.0876,
+        "open": 73
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 15722,
-        "wins": 4965,
-        "net_usdt": -5846.213,
-        "roi_pct": -5.8462,
-        "fees_usdt": 4488.4845,
-        "open": 299
+        "trades": 15736,
+        "wins": 4979,
+        "net_usdt": -5844.945,
+        "roi_pct": -5.8449,
+        "fees_usdt": 4492.3915,
+        "open": 293
       }
     ],
     "rankings": [
@@ -636,36 +636,25 @@
           },
           {
             "id": "217",
-            "trades": 9,
+            "trades": 10,
             "wins": 5,
-            "win_rate_pct": 55.56,
-            "net_usdt": 2.2183,
-            "roi_pct": 2.2183,
-            "fees_usdt": 3.1478,
-            "profit_factor": 1.891,
-            "max_dd": 1.5723
+            "win_rate_pct": 50.0,
+            "net_usdt": 1.9373,
+            "roi_pct": 1.9373,
+            "fees_usdt": 3.5088,
+            "profit_factor": 1.699,
+            "max_dd": 1.8429
           },
           {
             "id": "479",
-            "trades": 7,
+            "trades": 8,
             "wins": 3,
-            "win_rate_pct": 42.86,
-            "net_usdt": 2.1288,
-            "roi_pct": 2.1288,
-            "fees_usdt": 1.8358,
-            "profit_factor": 4.18,
-            "max_dd": 0.5996
-          },
-          {
-            "id": "883",
-            "trades": 7,
-            "wins": 2,
-            "win_rate_pct": 28.57,
-            "net_usdt": 1.2785,
-            "roi_pct": 1.2785,
-            "fees_usdt": 1.8143,
-            "profit_factor": 2.61,
-            "max_dd": 0.5996
+            "win_rate_pct": 37.5,
+            "net_usdt": 1.6146,
+            "roi_pct": 1.6146,
+            "fees_usdt": 2.1964,
+            "profit_factor": 2.364,
+            "max_dd": 1.1002
           },
           {
             "id": "277",
@@ -677,6 +666,17 @@
             "fees_usdt": 0.7077,
             "profit_factor": null,
             "max_dd": 0.0
+          },
+          {
+            "id": "883",
+            "trades": 8,
+            "wins": 2,
+            "win_rate_pct": 25.0,
+            "net_usdt": 0.7685,
+            "roi_pct": 0.7685,
+            "fees_usdt": 2.1718,
+            "profit_factor": 1.589,
+            "max_dd": 1.1002
           }
         ]
       },
