@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-30T17:49:37.111620+00:00",
+  "generated_utc": "2026-10-30T17:54:39.497366+00:00",
   "hunter": {
     "strategies": 1000,
     "trades": 2978,
@@ -7,7 +7,7 @@
     "net_usdt": -6582.7486,
     "roi_pct": -0.6583,
     "open": 52,
-    "updated_utc": "2026-10-30T17:49:25.698490+00:00",
+    "updated_utc": "2026-10-30T17:54:25.734888+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
@@ -301,7 +301,7 @@
     "net_usdt": -2605.1444,
     "roi_pct": -2.6051,
     "open": 114,
-    "updated_utc": "2026-10-30T17:49:00.218214+00:00",
+    "updated_utc": "2026-10-30T17:54:21.425472+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 32116,
-    "wins": 7734,
-    "net_usdt": -11845.2026,
-    "roi_pct": -5.9226,
-    "open": 257,
-    "updated_utc": "2026-10-30T17:48:00+00:00",
+    "trades": 32243,
+    "wins": 7742,
+    "net_usdt": -11915.9848,
+    "roi_pct": -5.958,
+    "open": 392,
+    "updated_utc": "2026-10-30T17:53:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 19405,
-        "wins": 3689,
-        "net_usdt": -7071.591,
-        "roi_pct": -7.0716,
-        "fees_usdt": 5221.4333,
-        "open": 58
+        "trades": 19454,
+        "wins": 3692,
+        "net_usdt": -7093.333,
+        "roi_pct": -7.0933,
+        "fees_usdt": 5233.4391,
+        "open": 169
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 12711,
-        "wins": 4045,
-        "net_usdt": -4773.6116,
-        "roi_pct": -4.7736,
-        "fees_usdt": 3650.4623,
-        "open": 199
+        "trades": 12789,
+        "wins": 4050,
+        "net_usdt": -4822.6518,
+        "roi_pct": -4.8227,
+        "fees_usdt": 3671.8995,
+        "open": 223
       }
     ],
     "rankings": [
@@ -685,13 +685,13 @@
         "top5": [
           {
             "id": "1167",
-            "trades": 21,
+            "trades": 22,
             "wins": 15,
-            "win_rate_pct": 71.43,
-            "net_usdt": 10.402,
-            "roi_pct": 10.402,
-            "fees_usdt": 5.3733,
-            "profit_factor": 3.836,
+            "win_rate_pct": 68.18,
+            "net_usdt": 10.1846,
+            "roi_pct": 10.1846,
+            "fees_usdt": 5.5764,
+            "profit_factor": 3.622,
             "max_dd": 1.8479
           },
           {
