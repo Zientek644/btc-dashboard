@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-10-31T09:10:20.814539+00:00",
+  "generated_utc": "2026-10-31T09:15:22.665893+00:00",
   "hunter": {
     "strategies": 1000,
     "trades": 4499,
     "wins": 1507,
     "net_usdt": -10128.887,
     "roi_pct": -1.0129,
-    "open": 310,
-    "updated_utc": "2026-10-31T09:09:57.012728+00:00",
+    "open": 330,
+    "updated_utc": "2026-10-31T09:14:57.429660+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
@@ -18,7 +18,7 @@
         "net_usdt": -6753.8845,
         "roi_pct": -2.7016,
         "fees_usdt": 4791.1443,
-        "open": 40
+        "open": 60
       },
       {
         "label": "15 Minuten",
@@ -301,7 +301,7 @@
     "net_usdt": -2967.154,
     "roi_pct": -2.9672,
     "open": 100,
-    "updated_utc": "2026-10-31T09:10:01.705942+00:00",
+    "updated_utc": "2026-10-31T09:14:37.985155+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,32 +590,32 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 51936,
+    "trades": 52056,
     "wins": 10111,
-    "net_usdt": -18694.6173,
-    "roi_pct": -9.3473,
-    "open": 408,
-    "updated_utc": "2026-10-31T09:09:00+00:00",
+    "net_usdt": -18731.5197,
+    "roi_pct": -9.3658,
+    "open": 349,
+    "updated_utc": "2026-10-31T09:14:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 32002,
+        "trades": 32102,
         "wins": 4560,
-        "net_usdt": -11194.3539,
-        "roi_pct": -11.1944,
-        "fees_usdt": 8220.9403,
-        "open": 171
+        "net_usdt": -11224.4388,
+        "roi_pct": -11.2244,
+        "fees_usdt": 8243.7238,
+        "open": 112
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 19934,
+        "trades": 19954,
         "wins": 5551,
-        "net_usdt": -7500.2634,
-        "roi_pct": -7.5003,
-        "fees_usdt": 5704.5518,
+        "net_usdt": -7507.0809,
+        "roi_pct": -7.5071,
+        "fees_usdt": 5709.7273,
         "open": 237
       }
     ],
