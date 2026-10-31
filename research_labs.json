@@ -1,34 +1,34 @@
 {
-  "generated_utc": "2026-10-31T01:02:23.663600+00:00",
+  "generated_utc": "2026-10-31T01:07:25.305439+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 3593,
-    "wins": 1302,
-    "net_usdt": -8445.6256,
-    "roi_pct": -0.8446,
-    "open": 251,
-    "updated_utc": "2026-10-31T01:01:56.203975+00:00",
+    "trades": 3618,
+    "wins": 1312,
+    "net_usdt": -8547.938,
+    "roi_pct": -0.8548,
+    "open": 246,
+    "updated_utc": "2026-10-31T01:06:56.679903+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 2220,
-        "wins": 790,
-        "net_usdt": -5669.7531,
-        "roi_pct": -2.2679,
-        "fees_usdt": 3955.5001,
+        "trades": 2240,
+        "wins": 800,
+        "net_usdt": -5720.6395,
+        "roi_pct": -2.2883,
+        "fees_usdt": 3989.1404,
         "open": 90
       },
       {
         "label": "15 Minuten",
         "strategies": 250,
-        "trades": 784,
+        "trades": 789,
         "wins": 291,
-        "net_usdt": -1483.5332,
-        "roi_pct": -0.5934,
-        "fees_usdt": 1414.3474,
-        "open": 61
+        "net_usdt": -1534.9592,
+        "roi_pct": -0.614,
+        "fees_usdt": 1424.7118,
+        "open": 56
       },
       {
         "label": "30 Minuten",
@@ -127,17 +127,6 @@
             "max_dd": 11.1604
           },
           {
-            "id": "15M_50X_30W_INVERSE_FIXED",
-            "trades": 16,
-            "wins": 10,
-            "win_rate_pct": 62.5,
-            "net_usdt": 58.6546,
-            "roi_pct": 5.8655,
-            "fees_usdt": 31.9321,
-            "profit_factor": 3.379,
-            "max_dd": 11.1181
-          },
-          {
             "id": "15M_100X_60W_INVERSE_FIXED",
             "trades": 9,
             "wins": 6,
@@ -149,26 +138,37 @@
             "max_dd": 11.031
           },
           {
-            "id": "15M_100X_30W_INVERSE_FIXED",
-            "trades": 27,
-            "wins": 15,
-            "win_rate_pct": 55.56,
-            "net_usdt": 53.6331,
-            "roi_pct": 5.3633,
-            "fees_usdt": 54.185,
-            "profit_factor": 1.625,
-            "max_dd": 23.3758
+            "id": "15M_100X_60W_INVERSE_TRAIL",
+            "trades": 9,
+            "wins": 6,
+            "win_rate_pct": 66.67,
+            "net_usdt": 48.3274,
+            "roi_pct": 4.8327,
+            "fees_usdt": 15.4904,
+            "profit_factor": 4.711,
+            "max_dd": 11.1568
           },
           {
-            "id": "15M_10X_30W_INVERSE_FIXED",
+            "id": "15M_50X_30W_INVERSE_FIXED",
             "trades": 17,
             "wins": 10,
             "win_rate_pct": 58.82,
-            "net_usdt": 48.4107,
-            "roi_pct": 4.8411,
-            "fees_usdt": 33.873,
-            "profit_factor": 2.398,
-            "max_dd": 21.0772
+            "net_usdt": 48.2965,
+            "roi_pct": 4.8297,
+            "fees_usdt": 34.0196,
+            "profit_factor": 2.379,
+            "max_dd": 11.1181
+          },
+          {
+            "id": "15M_100X_30W_INVERSE_FIXED",
+            "trades": 28,
+            "wins": 15,
+            "win_rate_pct": 53.57,
+            "net_usdt": 43.3242,
+            "roi_pct": 4.3324,
+            "fees_usdt": 56.2627,
+            "profit_factor": 1.451,
+            "max_dd": 23.3758
           }
         ]
       },
@@ -301,7 +301,7 @@
     "net_usdt": -2804.6538,
     "roi_pct": -2.8047,
     "open": 150,
-    "updated_utc": "2026-10-31T01:01:47.164275+00:00",
+    "updated_utc": "2026-10-31T01:07:07.204815+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 42849,
-    "wins": 9733,
-    "net_usdt": -15518.7248,
-    "roi_pct": -7.7594,
-    "open": 431,
-    "updated_utc": "2026-10-31T01:01:00+00:00",
+    "trades": 42999,
+    "wins": 9737,
+    "net_usdt": -15563.9663,
+    "roi_pct": -7.782,
+    "open": 357,
+    "updated_utc": "2026-10-31T01:06:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 26086,
+        "trades": 26193,
         "wins": 4459,
-        "net_usdt": -9328.5268,
-        "roi_pct": -9.3285,
-        "fees_usdt": 6850.7147,
-        "open": 172
+        "net_usdt": -9360.3347,
+        "roi_pct": -9.3603,
+        "fees_usdt": 6877.0922,
+        "open": 109
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 16763,
-        "wins": 5274,
-        "net_usdt": -6190.198,
-        "roi_pct": -6.1902,
-        "fees_usdt": 4796.2072,
-        "open": 259
+        "trades": 16806,
+        "wins": 5278,
+        "net_usdt": -6203.6316,
+        "roi_pct": -6.2036,
+        "fees_usdt": 4808.6603,
+        "open": 248
       }
     ],
     "rankings": [
@@ -657,17 +657,6 @@
             "max_dd": 1.1002
           },
           {
-            "id": "277",
-            "trades": 3,
-            "wins": 3,
-            "win_rate_pct": 100.0,
-            "net_usdt": 1.0411,
-            "roi_pct": 1.0411,
-            "fees_usdt": 1.0639,
-            "profit_factor": null,
-            "max_dd": 0.0
-          },
-          {
             "id": "883",
             "trades": 8,
             "wins": 2,
@@ -677,6 +666,17 @@
             "fees_usdt": 2.1718,
             "profit_factor": 1.589,
             "max_dd": 1.1002
+          },
+          {
+            "id": "277",
+            "trades": 4,
+            "wins": 3,
+            "win_rate_pct": 75.0,
+            "net_usdt": 0.7299,
+            "roi_pct": 0.7299,
+            "fees_usdt": 1.4207,
+            "profit_factor": 3.345,
+            "max_dd": 0.308
           }
         ]
       },
