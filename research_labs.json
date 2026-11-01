@@ -1,24 +1,24 @@
 {
-  "generated_utc": "2026-11-01T07:33:23.454121+00:00",
+  "generated_utc": "2026-11-01T07:38:25.386195+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 6959,
+    "trades": 7019,
     "wins": 1847,
-    "net_usdt": -15983.3789,
-    "roi_pct": -1.5983,
-    "open": 390,
-    "updated_utc": "2026-11-01T07:33:00.265471+00:00",
+    "net_usdt": -16126.1695,
+    "roi_pct": -1.6126,
+    "open": 330,
+    "updated_utc": "2026-11-01T07:38:00.264095+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 3910,
+        "trades": 3970,
         "wins": 1010,
-        "net_usdt": -9583.2896,
-        "roi_pct": -3.8333,
-        "fees_usdt": 6863.168,
-        "open": 110
+        "net_usdt": -9726.0802,
+        "roi_pct": -3.8904,
+        "fees_usdt": 6969.6227,
+        "open": 50
       },
       {
         "label": "15 Minuten",
@@ -301,7 +301,7 @@
     "net_usdt": -4128.3895,
     "roi_pct": -4.1284,
     "open": 16,
-    "updated_utc": "2026-11-01T07:33:01.646429+00:00",
+    "updated_utc": "2026-11-01T07:38:22.262133+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 75190,
+    "trades": 75248,
     "wins": 10864,
-    "net_usdt": -25967.6129,
-    "roi_pct": -12.9838,
-    "open": 338,
-    "updated_utc": "2026-11-01T07:32:00+00:00",
+    "net_usdt": -25983.1025,
+    "roi_pct": -12.9916,
+    "open": 335,
+    "updated_utc": "2026-11-01T07:37:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 47359,
+        "trades": 47398,
         "wins": 4704,
-        "net_usdt": -15455.7904,
-        "roi_pct": -15.4558,
-        "fees_usdt": 11387.7281,
-        "open": 56
+        "net_usdt": -15464.5927,
+        "roi_pct": -15.4646,
+        "fees_usdt": 11394.3928,
+        "open": 59
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 27831,
+        "trades": 27850,
         "wins": 6160,
-        "net_usdt": -10511.8225,
-        "roi_pct": -10.5118,
-        "fees_usdt": 7832.641,
-        "open": 282
+        "net_usdt": -10518.5098,
+        "roi_pct": -10.5185,
+        "fees_usdt": 7837.8656,
+        "open": 276
       }
     ],
     "rankings": [
