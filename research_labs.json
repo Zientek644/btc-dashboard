@@ -1,44 +1,44 @@
 {
-  "generated_utc": "2026-11-01T17:57:08.033231+00:00",
+  "generated_utc": "2026-11-01T18:02:09.800442+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 8394,
-    "wins": 2047,
-    "net_usdt": -19477.9495,
-    "roi_pct": -1.9478,
-    "open": 220,
-    "updated_utc": "2026-11-01T17:57:02.359905+00:00",
+    "trades": 8454,
+    "wins": 2057,
+    "net_usdt": -19619.1618,
+    "roi_pct": -1.9619,
+    "open": 200,
+    "updated_utc": "2026-11-01T18:02:01.255232+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 4640,
-        "wins": 1080,
-        "net_usdt": -11244.7207,
-        "roi_pct": -4.4979,
-        "fees_usdt": 8087.0994,
+        "trades": 4660,
+        "wins": 1090,
+        "net_usdt": -11290.6272,
+        "roi_pct": -4.5163,
+        "fees_usdt": 8120.3317,
         "open": 40
       },
       {
         "label": "15 Minuten",
         "strategies": 250,
-        "trades": 2005,
+        "trades": 2025,
         "wins": 481,
-        "net_usdt": -4435.285,
-        "roi_pct": -1.7741,
-        "fees_usdt": 3574.4209,
+        "net_usdt": -4482.4949,
+        "roi_pct": -1.793,
+        "fees_usdt": 3607.6479,
         "open": 20
       },
       {
         "label": "30 Minuten",
         "strategies": 250,
-        "trades": 1167,
+        "trades": 1187,
         "wins": 330,
-        "net_usdt": -2620.621,
-        "roi_pct": -1.0482,
-        "fees_usdt": 2104.2442,
-        "open": 80
+        "net_usdt": -2668.7169,
+        "roi_pct": -1.0675,
+        "fees_usdt": 2139.829,
+        "open": 60
       },
       {
         "label": "60 Minuten",
@@ -220,15 +220,15 @@
             "max_dd": 41.3016
           },
           {
-            "id": "30M_100X_60W_INVERSE_FIXED",
-            "trades": 12,
-            "wins": 6,
-            "win_rate_pct": 50.0,
-            "net_usdt": 8.0979,
-            "roi_pct": 0.8098,
-            "fees_usdt": 23.8021,
-            "profit_factor": 1.506,
-            "max_dd": 12.7997
+            "id": "30M_75X_30W_INVERSE_FIXED",
+            "trades": 25,
+            "wins": 10,
+            "win_rate_pct": 40.0,
+            "net_usdt": 4.5251,
+            "roi_pct": 0.4525,
+            "fees_usdt": 50.5011,
+            "profit_factor": 1.062,
+            "max_dd": 40.8448
           }
         ]
       },
@@ -301,7 +301,7 @@
     "net_usdt": -4562.161,
     "roi_pct": -4.5622,
     "open": 0,
-    "updated_utc": "2026-11-01T17:56:50.894636+00:00",
+    "updated_utc": "2026-11-01T18:01:25.018474+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 87571,
-    "wins": 11523,
-    "net_usdt": -29411.121,
-    "roi_pct": -14.7056,
-    "open": 367,
-    "updated_utc": "2026-11-01T17:56:00+00:00",
+    "trades": 87700,
+    "wins": 11525,
+    "net_usdt": -29460.1931,
+    "roi_pct": -14.7301,
+    "open": 453,
+    "updated_utc": "2026-11-01T18:01:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 55385,
+        "trades": 55465,
         "wins": 4880,
-        "net_usdt": -17417.6844,
-        "roi_pct": -17.4177,
-        "fees_usdt": 12841.3288,
-        "open": 118
+        "net_usdt": -17435.5747,
+        "roi_pct": -17.4356,
+        "fees_usdt": 12853.9202,
+        "open": 170
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 32186,
-        "wins": 6643,
-        "net_usdt": -11993.4366,
-        "roi_pct": -11.9934,
-        "fees_usdt": 8934.177,
-        "open": 249
+        "trades": 32235,
+        "wins": 6645,
+        "net_usdt": -12024.6184,
+        "roi_pct": -12.0246,
+        "fees_usdt": 8946.3512,
+        "open": 283
       }
     ],
     "rankings": [
