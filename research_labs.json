@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-11-02T13:34:42.282434+00:00",
+  "generated_utc": "2026-11-02T13:39:44.529382+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 10616,
+    "trades": 10621,
     "wins": 2638,
-    "net_usdt": -25080.8824,
+    "net_usdt": -25080.9643,
     "roi_pct": -2.5081,
-    "open": 80,
-    "updated_utc": "2026-11-02T13:34:34.320419+00:00",
+    "open": 75,
+    "updated_utc": "2026-11-02T13:39:34.831007+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
@@ -33,12 +33,12 @@
       {
         "label": "30 Minuten",
         "strategies": 250,
-        "trades": 1492,
+        "trades": 1497,
         "wins": 445,
-        "net_usdt": -3706.7043,
+        "net_usdt": -3706.7862,
         "roi_pct": -1.4827,
-        "fees_usdt": 2677.1385,
-        "open": 15
+        "fees_usdt": 2684.4777,
+        "open": 10
       },
       {
         "label": "60 Minuten",
@@ -296,43 +296,43 @@
   },
   "evolution": {
     "strategies": 1000,
-    "trades": 14910,
-    "wins": 4168,
-    "net_usdt": -5330.0567,
-    "roi_pct": -5.3301,
-    "open": 205,
-    "updated_utc": "2026-11-02T13:34:17.933721+00:00",
+    "trades": 15074,
+    "wins": 4196,
+    "net_usdt": -5432.2308,
+    "roi_pct": -5.4322,
+    "open": 41,
+    "updated_utc": "2026-11-02T13:39:39.759708+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 11703,
+        "trades": 11803,
         "wins": 3080,
-        "net_usdt": -4430.2802,
-        "roi_pct": -17.7211,
-        "fees_usdt": 4086.8603,
-        "open": 100
+        "net_usdt": -4521.3302,
+        "roi_pct": -18.0853,
+        "fees_usdt": 4113.0361,
+        "open": 0
       },
       {
         "label": "15 Minuten",
         "strategies": 250,
-        "trades": 2148,
-        "wins": 792,
-        "net_usdt": -556.1463,
-        "roi_pct": -2.2246,
-        "fees_usdt": 618.3747,
-        "open": 48
+        "trades": 2196,
+        "wins": 820,
+        "net_usdt": -565.1977,
+        "roi_pct": -2.2608,
+        "fees_usdt": 630.7081,
+        "open": 0
       },
       {
         "label": "30 Minuten",
         "strategies": 250,
-        "trades": 559,
+        "trades": 575,
         "wins": 278,
-        "net_usdt": 146.1349,
-        "roi_pct": 0.5845,
-        "fees_usdt": 122.2551,
-        "open": 57
+        "net_usdt": 144.0622,
+        "roi_pct": 0.5762,
+        "fees_usdt": 125.6051,
+        "open": 41
       },
       {
         "label": "60 Minuten",
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 113014,
-    "wins": 14254,
-    "net_usdt": -35556.3004,
-    "roi_pct": -17.7782,
-    "open": 276,
-    "updated_utc": "2026-11-02T13:33:00+00:00",
+    "trades": 113271,
+    "wins": 14345,
+    "net_usdt": -35644.3922,
+    "roi_pct": -17.8222,
+    "open": 581,
+    "updated_utc": "2026-11-02T13:38:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 71614,
-        "wins": 5595,
-        "net_usdt": -20784.9189,
-        "roi_pct": -20.7849,
-        "fees_usdt": 15300.8114,
-        "open": 46
+        "trades": 71671,
+        "wins": 5618,
+        "net_usdt": -20791.8517,
+        "roi_pct": -20.7919,
+        "fees_usdt": 15307.3197,
+        "open": 275
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 41400,
-        "wins": 8659,
-        "net_usdt": -14771.3815,
-        "roi_pct": -14.7714,
-        "fees_usdt": 11059.5119,
-        "open": 230
+        "trades": 41600,
+        "wins": 8727,
+        "net_usdt": -14852.5405,
+        "roi_pct": -14.8525,
+        "fees_usdt": 11105.8925,
+        "open": 306
       }
     ],
     "rankings": [
