@@ -1,34 +1,34 @@
 {
-  "generated_utc": "2026-11-05T15:53:59.292459+00:00",
+  "generated_utc": "2026-11-05T15:59:01.481716+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 15146,
-    "wins": 4220,
-    "net_usdt": -34404.2613,
-    "roi_pct": -3.4404,
-    "open": 1,
-    "updated_utc": "2026-11-05T15:53:44.246904+00:00",
+    "trades": 15166,
+    "wins": 4229,
+    "net_usdt": -34488.4784,
+    "roi_pct": -3.4488,
+    "open": 19,
+    "updated_utc": "2026-11-05T15:58:44.263512+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 9077,
-        "wins": 2372,
-        "net_usdt": -20231.9504,
-        "roi_pct": -8.0928,
-        "fees_usdt": 15180.0966,
-        "open": 0
+        "trades": 9096,
+        "wins": 2380,
+        "net_usdt": -20323.1569,
+        "roi_pct": -8.1293,
+        "fees_usdt": 15207.8703,
+        "open": 19
       },
       {
         "label": "15 Minuten",
         "strategies": 250,
-        "trades": 3447,
-        "wins": 1023,
-        "net_usdt": -7925.8662,
-        "roi_pct": -3.1703,
-        "fees_usdt": 5962.7634,
-        "open": 1
+        "trades": 3448,
+        "wins": 1024,
+        "net_usdt": -7918.8768,
+        "roi_pct": -3.1676,
+        "fees_usdt": 5964.2849,
+        "open": 0
       },
       {
         "label": "30 Minuten",
@@ -301,7 +301,7 @@
     "net_usdt": -7190.5387,
     "roi_pct": -7.1905,
     "open": 30,
-    "updated_utc": "2026-11-05T15:53:46.463467+00:00",
+    "updated_utc": "2026-11-05T15:58:21.086211+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 217808,
-    "wins": 33705,
-    "net_usdt": -53173.1463,
-    "roi_pct": -26.5866,
-    "open": 264,
-    "updated_utc": "2026-11-05T15:52:00+00:00",
+    "trades": 217982,
+    "wins": 33755,
+    "net_usdt": -53213.7319,
+    "roi_pct": -26.6069,
+    "open": 285,
+    "updated_utc": "2026-11-05T15:57:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 135957,
-        "wins": 13630,
-        "net_usdt": -29266.1998,
-        "roi_pct": -29.2662,
-        "fees_usdt": 21708.5232,
-        "open": 123
+        "trades": 136065,
+        "wins": 13663,
+        "net_usdt": -29286.4394,
+        "roi_pct": -29.2864,
+        "fees_usdt": 21717.0187,
+        "open": 127
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 81851,
-        "wins": 20075,
-        "net_usdt": -23906.9465,
-        "roi_pct": -23.9069,
-        "fees_usdt": 17967.874,
-        "open": 141
+        "trades": 81917,
+        "wins": 20092,
+        "net_usdt": -23927.2925,
+        "roi_pct": -23.9273,
+        "fees_usdt": 17976.1836,
+        "open": 158
       }
     ],
     "rankings": [
@@ -695,17 +695,6 @@
             "max_dd": 4.2209
           },
           {
-            "id": "1014",
-            "trades": 35,
-            "wins": 17,
-            "win_rate_pct": 48.57,
-            "net_usdt": 2.6609,
-            "roi_pct": 2.6609,
-            "fees_usdt": 10.0008,
-            "profit_factor": 1.15,
-            "max_dd": 10.8983
-          },
-          {
             "id": "1642",
             "trades": 2,
             "wins": 2,
@@ -737,6 +726,17 @@
             "fees_usdt": 3.9453,
             "profit_factor": 1.268,
             "max_dd": 5.5673
+          },
+          {
+            "id": "1014",
+            "trades": 36,
+            "wins": 17,
+            "win_rate_pct": 47.22,
+            "net_usdt": 1.5805,
+            "roi_pct": 1.5805,
+            "fees_usdt": 10.2476,
+            "profit_factor": 1.084,
+            "max_dd": 10.8983
           }
         ]
       }
