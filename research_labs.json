@@ -1,54 +1,54 @@
 {
-  "generated_utc": "2026-11-08T21:58:53.436436+00:00",
+  "generated_utc": "2026-11-08T22:03:55.113982+00:00",
   "hunter": {
     "strategies": 1000,
-    "trades": 23652,
+    "trades": 23844,
     "wins": 5741,
-    "net_usdt": -50569.2211,
-    "roi_pct": -5.0569,
-    "open": 7,
-    "updated_utc": "2026-11-08T21:58:25.541896+00:00",
+    "net_usdt": -52409.214,
+    "roi_pct": -5.2409,
+    "open": 178,
+    "updated_utc": "2026-11-08T22:03:25.515042+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
         "label": "5 Minuten",
         "strategies": 250,
-        "trades": 13504,
+        "trades": 13578,
         "wins": 3200,
-        "net_usdt": -28472.607,
-        "roi_pct": -11.389,
-        "fees_usdt": 21728.2813,
-        "open": 7
+        "net_usdt": -29122.9085,
+        "roi_pct": -11.6492,
+        "fees_usdt": 21843.5861,
+        "open": 60
       },
       {
         "label": "15 Minuten",
         "strategies": 250,
-        "trades": 5614,
+        "trades": 5648,
         "wins": 1389,
-        "net_usdt": -12117.5979,
-        "roi_pct": -4.847,
-        "fees_usdt": 9423.4505,
-        "open": 0
+        "net_usdt": -12452.2153,
+        "roi_pct": -4.9809,
+        "fees_usdt": 9482.5304,
+        "open": 34
       },
       {
         "label": "30 Minuten",
         "strategies": 250,
-        "trades": 3184,
+        "trades": 3216,
         "wins": 786,
-        "net_usdt": -6901.1086,
-        "roi_pct": -2.7604,
-        "fees_usdt": 5532.5241,
-        "open": 0
+        "net_usdt": -7222.0384,
+        "roi_pct": -2.8888,
+        "fees_usdt": 5589.1788,
+        "open": 32
       },
       {
         "label": "60 Minuten",
         "strategies": 250,
-        "trades": 1350,
+        "trades": 1402,
         "wins": 366,
-        "net_usdt": -3077.9076,
-        "roi_pct": -1.2312,
-        "fees_usdt": 2423.3,
-        "open": 0
+        "net_usdt": -3612.0518,
+        "roi_pct": -1.4448,
+        "fees_usdt": 2517.6425,
+        "open": 52
       }
     ],
     "rankings": [
@@ -117,46 +117,46 @@
         "top5": [
           {
             "id": "15M_100X_60W_MOMENTUM_FIXED",
-            "trades": 2,
+            "trades": 3,
             "wins": 2,
-            "win_rate_pct": 100.0,
-            "net_usdt": 27.1887,
-            "roi_pct": 2.7189,
-            "fees_usdt": 3.9405,
-            "profit_factor": null,
-            "max_dd": 0.0
+            "win_rate_pct": 66.67,
+            "net_usdt": 16.7599,
+            "roi_pct": 1.676,
+            "fees_usdt": 5.9662,
+            "profit_factor": 2.607,
+            "max_dd": 10.4288
           },
           {
             "id": "15M_100X_30W_MOMENTUM_TRAIL",
-            "trades": 24,
+            "trades": 25,
             "wins": 13,
-            "win_rate_pct": 54.17,
-            "net_usdt": 19.5902,
-            "roi_pct": 1.959,
-            "fees_usdt": 41.5082,
-            "profit_factor": 1.27,
-            "max_dd": 15.6069
+            "win_rate_pct": 52.0,
+            "net_usdt": 8.7685,
+            "roi_pct": 0.8768,
+            "fees_usdt": 43.2369,
+            "profit_factor": 1.105,
+            "max_dd": 26.0231
           },
           {
             "id": "15M_100X_60W_MOMENTUM_TRAIL",
-            "trades": 2,
+            "trades": 3,
             "wins": 2,
-            "win_rate_pct": 100.0,
-            "net_usdt": 18.9689,
-            "roi_pct": 1.8969,
-            "fees_usdt": 3.371,
-            "profit_factor": null,
-            "max_dd": 0.0
+            "win_rate_pct": 66.67,
+            "net_usdt": 8.1538,
+            "roi_pct": 0.8154,
+            "fees_usdt": 5.0987,
+            "profit_factor": 1.754,
+            "max_dd": 10.8152
           },
           {
             "id": "15M_100X_30W_MOMENTUM_FIXED",
-            "trades": 27,
+            "trades": 28,
             "wins": 13,
-            "win_rate_pct": 48.15,
-            "net_usdt": 12.7956,
-            "roi_pct": 1.2796,
-            "fees_usdt": 53.3993,
-            "profit_factor": 1.104,
+            "win_rate_pct": 46.43,
+            "net_usdt": 2.513,
+            "roi_pct": 0.2513,
+            "fees_usdt": 55.3966,
+            "profit_factor": 1.019,
             "max_dd": 26.5728
           },
           {
@@ -301,7 +301,7 @@
     "net_usdt": -11015.1518,
     "roi_pct": -11.0152,
     "open": 29,
-    "updated_utc": "2026-11-08T21:58:17.810744+00:00",
+    "updated_utc": "2026-11-08T22:03:39.482118+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 312009,
-    "wins": 44248,
-    "net_usdt": -64709.3289,
-    "roi_pct": -32.3547,
-    "open": 492,
-    "updated_utc": "2026-11-08T21:57:00+00:00",
+    "trades": 312283,
+    "wins": 44374,
+    "net_usdt": -64739.5157,
+    "roi_pct": -32.3698,
+    "open": 406,
+    "updated_utc": "2026-11-08T22:02:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 195752,
-        "wins": 17920,
-        "net_usdt": -34722.3264,
-        "roi_pct": -34.7223,
-        "fees_usdt": 25784.5681,
-        "open": 243
+        "trades": 195927,
+        "wins": 18004,
+        "net_usdt": -34738.5105,
+        "roi_pct": -34.7385,
+        "fees_usdt": 25790.9817,
+        "open": 169
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 116257,
-        "wins": 26328,
-        "net_usdt": -29987.0025,
-        "roi_pct": -29.987,
-        "fees_usdt": 22303.0147,
-        "open": 249
+        "trades": 116356,
+        "wins": 26370,
+        "net_usdt": -30001.0052,
+        "roi_pct": -30.001,
+        "fees_usdt": 22309.64,
+        "open": 237
       }
     ],
     "rankings": [
