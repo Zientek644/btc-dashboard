@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-08T02:11:22.045566+00:00",
+  "generated_utc": "2026-11-08T02:16:23.954967+00:00",
   "hunter": {
     "strategies": 1000,
     "trades": 20945,
@@ -7,7 +7,7 @@
     "net_usdt": -46630.6568,
     "roi_pct": -4.6631,
     "open": 140,
-    "updated_utc": "2026-11-08T02:10:52.500709+00:00",
+    "updated_utc": "2026-11-08T02:16:22.279902+00:00",
     "note": "Hypothetische Liquidationszonen; kein echter Liquidationsdatenfeed",
     "timeframes": [
       {
@@ -296,12 +296,12 @@
   },
   "evolution": {
     "strategies": 1000,
-    "trades": 29359,
+    "trades": 29409,
     "wins": 8023,
-    "net_usdt": -10022.7592,
-    "roi_pct": -10.0228,
-    "open": 75,
-    "updated_utc": "2026-11-08T02:10:50.611121+00:00",
+    "net_usdt": -10070.7072,
+    "roi_pct": -10.0707,
+    "open": 25,
+    "updated_utc": "2026-11-08T02:16:11.385642+00:00",
     "note": "MA-Cross, Pullback und Breakout; feste Regeln, keine selbstlernende KI",
     "timeframes": [
       {
@@ -327,12 +327,12 @@
       {
         "label": "30 Minuten",
         "strategies": 250,
-        "trades": 1466,
+        "trades": 1516,
         "wins": 525,
-        "net_usdt": -277.4509,
-        "roi_pct": -1.1098,
-        "fees_usdt": 298.9811,
-        "open": 75
+        "net_usdt": -325.3989,
+        "roi_pct": -1.3016,
+        "fees_usdt": 316.5021,
+        "open": 25
       },
       {
         "label": "60 Minuten",
@@ -503,26 +503,26 @@
             "max_dd": 2.3709
           },
           {
-            "id": "30M_ATR_1_5_NONE_TP3p0_NONE",
+            "id": "30M_ATR_2_TRAIL_2ATR_TP3p0_NONE",
             "trades": 8,
             "wins": 4,
             "win_rate_pct": 50.0,
-            "net_usdt": 3.7861,
-            "roi_pct": 3.7861,
-            "fees_usdt": 1.3711,
-            "profit_factor": 2.324,
-            "max_dd": 2.5436
+            "net_usdt": 3.4312,
+            "roi_pct": 3.4312,
+            "fees_usdt": 1.0868,
+            "profit_factor": 2.943,
+            "max_dd": 1.5194
           },
           {
-            "id": "30M_ATR_1_5_BE_1_5R_TP3p0_NONE",
+            "id": "30M_ATR_2_BE_1R_TP2p0_NONE",
             "trades": 8,
-            "wins": 4,
-            "win_rate_pct": 50.0,
-            "net_usdt": 3.7861,
-            "roi_pct": 3.7861,
-            "fees_usdt": 1.3711,
-            "profit_factor": 2.324,
-            "max_dd": 2.5436
+            "wins": 5,
+            "win_rate_pct": 62.5,
+            "net_usdt": 3.3999,
+            "roi_pct": 3.3999,
+            "fees_usdt": 1.0855,
+            "profit_factor": 3.178,
+            "max_dd": 1.3149
           }
         ]
       },
@@ -590,33 +590,33 @@
   },
   "orderflow": {
     "strategies": 2000,
-    "trades": 288596,
-    "wins": 42616,
-    "net_usdt": -62338.2224,
-    "roi_pct": -31.1691,
-    "open": 164,
-    "updated_utc": "2026-11-08T02:10:00+00:00",
+    "trades": 288653,
+    "wins": 42618,
+    "net_usdt": -62351.2532,
+    "roi_pct": -31.1756,
+    "open": 367,
+    "updated_utc": "2026-11-08T02:15:00+00:00",
     "note": "1-Minuten-Marktdaten; Scalping und Intraday. Historische Tests hier bewusst nicht zu Live-Trades addiert. Bei Agentenauswahl können weniger als 2.000 aktiv sein.",
     "timeframes": [
       {
         "label": "Scalping",
         "strategies": 1000,
-        "trades": 180627,
+        "trades": 180653,
         "wins": 17399,
-        "net_usdt": -33552.1228,
-        "roi_pct": -33.5521,
-        "fees_usdt": 24834.1534,
-        "open": 36
+        "net_usdt": -33553.682,
+        "roi_pct": -33.5537,
+        "fees_usdt": 24835.6086,
+        "open": 158
       },
       {
         "label": "Intraday",
         "strategies": 1000,
-        "trades": 107969,
-        "wins": 25217,
-        "net_usdt": -28786.0996,
-        "roi_pct": -28.7861,
-        "fees_usdt": 21309.2981,
-        "open": 128
+        "trades": 108000,
+        "wins": 25219,
+        "net_usdt": -28797.5712,
+        "roi_pct": -28.7976,
+        "fees_usdt": 21314.0149,
+        "open": 209
       }
     ],
     "rankings": [
