@@ -1,61 +1,97 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-store"><title>BTC Strategieforschung · 4.000 Paper-Varianten</title><style>:root{font-family:system-ui,Segoe UI,sans-serif;color:#e7eff7;background:#0c151e}*{box-sizing:border-box}body{margin:0;padding:16px}.wrap{max-width:1050px;margin:auto}h1{font-size:1.8rem;margin:10px 0}.sub{color:#9badc1;font-size:.9rem;line-height:1.5}footer{color:#8c9dad;font-size:.79rem;margin:28px 0}</style></head><body><main class="wrap"><h1>BTC AI Monitor · Strategieforschung</h1><p class="sub">4.000 konfigurierte Paper-Strategien · Hunter, Evolution, Orderflow Scalping und Orderflow Intraday · keine Echtgeldorders</p></main><footer class="wrap">Paper-Simulationen, keine Renditegarantie. Ergebnisse verschiedener Startkapitalien und Zeiträume nicht direkt vergleichen.</footer><style id="btc-research-style">
-.research-wrap{max-width:1050px;margin:25px auto;color:#e7eff7;font:15px system-ui,Segoe UI,sans-serif}
-.research-wrap *{box-sizing:border-box}.research-wrap h2{font-size:1.3rem;margin:24px 0 8px}
-.research-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
-.research-card{padding:16px;border:1px solid #31475a;border-radius:14px;background:#182735}
-.research-card strong{display:block;font-size:1.05rem}.research-card .value{font-weight:750;font-size:1.55rem;margin:8px 0}
-.research-sub{color:#9badc1;font-size:.86rem;line-height:1.5}.research-scroll{overflow:auto;background:#182735;border:1px solid #31475a;border-radius:12px;margin:12px 0 22px}
-.research-scroll table{width:100%;border-collapse:collapse;min-width:610px}.research-scroll th,.research-scroll td{text-align:right;border-bottom:1px solid #31475a;padding:9px;font-size:.82rem}
-.research-scroll th:first-child,.research-scroll td:first-child{text-align:left}.research-scroll th:nth-child(2),.research-scroll td:nth-child(2){text-align:left}.research-pos{color:#78eab0}.research-neg{color:#ff8d8d}
-</style><section class="research-wrap" id="research-labs" aria-label="BTC Forschungslabs">
-<h2>BTC Strategieforschung</h2><p class="research-sub">Hunter, Evolution und Orderflow getrennt dargestellt · Paper-Trading · Keine Echtgeldorders. Rendite % bezieht sich auf das jeweilige Paper-Startkapital; unterschiedliche Laufzeiten und Risiken beachten.</p>
-<div id="research-status" class="research-sub">Lade Forschungsdaten …</div><div id="research-content"></div></section><script id="btc-research-script">
-(()=>{
- const el=id=>document.getElementById(id);
- const esc=x=>String(x??'–').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const num=(x,d=2)=>typeof x==='number'&&Number.isFinite(x)?x.toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d}):'–';
- const signed=x=>'<span class="'+(x>0?'research-pos':x<0?'research-neg':'')+'">'+num(x)+'</span>';
- const card=(label,value,extra='')=>'<div class="research-card"><strong>'+esc(label)+'</strong><div class="value">'+esc(value)+'</div><div class="research-sub">'+esc(extra)+'</div></div>';
- function ranking(label,items){
-   if(!items)return '';
-   const rows=items.map((t,i)=>'<tr><td>'+String(i+1)+'</td><td>'+esc(t.id)+'</td><td>'+num(t.trades,0)+'</td><td>'+num(t.wins,0)+'</td><td>'+num(t.win_rate_pct,1)+' %</td><td>'+signed(t.net_usdt)+'</td><td>'+signed(t.roi_pct)+' %</td><td>'+num(t.fees_usdt)+'</td><td>'+num(t.profit_factor,2)+'</td><td>'+num(t.max_dd)+'</td></tr>').join('');
-   return '<h3>Top 5 · '+esc(label)+'</h3><p class="research-sub">Sortiert nach Netto-PnL; Rendite relativ zum Startkapital der Strategie. Nur Strategien mit mindestens einem abgeschlossenen Trade. Vorläufiges Ranking, keine Profitabilitätsprognose.</p><div class="research-scroll"><table><thead><tr><th>#</th><th>Strategie</th><th>Trades</th><th>Gewinne</th><th>Trefferquote</th><th>Netto USDT</th><th>Rendite %</th><th>Gebühren USDT</th><th>Profit Factor</th><th>Max. DD (Lab: USDT; Orderflow: %)</th></tr></thead><tbody>'+(rows||'<tr><td colspan="10">Noch keine abgeschlossenen Trades.</td></tr>')+'</tbody></table></div>';
- }
- function lab(label,a){if(!a)return '<h2>'+esc(label)+'</h2><p class="research-sub">Noch keine verbundenen Daten.</p>';
-   let lines=(a.timeframes||[]).map(t=>'<tr><td>'+esc(t.label)+'</td><td>'+num(t.strategies,0)+'</td><td>'+num(t.trades,0)+'</td><td>'+num(t.wins,0)+'</td><td>'+signed(t.net_usdt)+'</td><td>'+signed(t.roi_pct)+' %</td><td>'+num(t.fees_usdt)+'</td><td>'+num(t.open,0)+'</td></tr>').join('');
-   let h='<h2>'+esc(label)+'</h2><div class="research-cards">'+card('Strategien',num(a.strategies,0))+card('Trades',num(a.trades,0))+card('Offene Positionen',num(a.open,0))+card('Netto, Summe separater Paper-Konten',num(a.net_usdt)+' USDT','Nicht die Rendite eines einzigen handelbaren Kontos')+card('Rendite auf simuliertes Startkapital',num(a.roi_pct)+' %','Gesamtrendite aller separaten Paper-Konten; kein einzelnes Handelskonto')+'</div>';
-   h+='<p class="research-sub">'+esc(a.note||'')+' · Stand: '+esc(a.updated_utc||'unbekannt')+'</p>';
-   if(lines)h+='<div class="research-scroll"><table><thead><tr><th>Timeframe / Bereich</th><th>Strategien</th><th>Trades</th><th>Gewinne</th><th>Netto USDT</th><th>Rendite %</th><th>Gebühren USDT</th><th>Offen</th></tr></thead><tbody>'+lines+'</tbody></table></div>';
-   if(a.rankings){for(let group of a.rankings)h+=ranking(group.label,group.top5);}
-   return h;
- }
- async function refresh(){try{let d;if(location.protocol==='file:'){let embedded=el('btc-preview-data');if(!embedded)throw Error('Vorschau-Daten fehlen');d=JSON.parse(embedded.textContent)}else{let r=await fetch('./research_labs.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);d=await r.json();}
-   let ts=Date.parse(d.generated_utc), mins=Number.isFinite(ts)?Math.round((Date.now()-ts)/60000):null;
-   el('research-status').textContent='Letzte Synchronisierung: '+(Number.isFinite(ts)?new Date(ts).toLocaleString('de-DE'):'unbekannt')+(mins!==null&&mins>10?' · ⚠ Daten möglicherweise veraltet':'');
-   el('research-content').innerHTML=lab('Hunter Strategy Lab · 1.000',d.hunter)+lab('Evolution Strategy Lab · 1.000',d.evolution)+lab('Orderflow-Forschung · bis zu 2.000',d.orderflow);
- }catch(err){el('research-status').textContent='Forschungsdaten derzeit nicht abrufbar: '+err.message;}}
- refresh();setInterval(refresh,60000);
-})();
-</script><!-- KI_ABC_1_0_BEGIN -->
-<section id="ki-abc-1-0" style="margin:26px auto;max-width:1200px;padding:12px">
-<h2>KI 1.0 · A/B/C-Vergleich</h2>
-<p style="font:14px system-ui">Fortlaufender Shadow-Test mit A Original, B KI, C KI + Wochenendfilter. Keine eigenständige Orderausführung.</p>
-<iframe title="KI 1.0 A/B/C" src="ki_abc_1_0.html" loading="lazy" style="width:100%;height:680px;border:1px solid #52627a;border-radius:10px;background:#101827"></iframe>
-</section>
-<!-- KI_ABC_1_0_END -->
-<!-- KI_PAPER_441_BEGIN -->
-<section id="ki-paper-441" style="margin:26px auto;max-width:1200px;padding:12px">
-<h2>KI 1.0 · Eigenständiger Paper-Test (441 Konten)</h2>
-<p style="font:14px system-ui;line-height:1.5">147 Strategien × A/B/C, je 100 virtuelle USDT. A Original, B eingefrorene KI, C KI + Wochenendfilter. Eigene simulierte Positionen, keine Echtgeldorders. Vom Shadow-Test getrennt. Offene PnL und Funding nicht enthalten.</p>
-<iframe title="KI 1.0 · Paper A/B/C mit 441 Konten" src="ki_abc_paper_441.html" loading="lazy" style="width:100%;height:760px;border:1px solid #52627a;border-radius:10px;background:#101827"></iframe>
-</section>
-<!-- KI_PAPER_441_END -->
-<!-- ALTCOIN_RADAR_3_0_BEGIN -->
-<section id="altcoin-radar-3-0" style="margin:26px auto;max-width:1200px;padding:12px">
-<h2>Lab 3.0 · Altcoin Breakout Radar · Spot &amp; Futures</h2>
-<p style="font:14px system-ui;line-height:1.6">Regelbasierte Ausbruchserkennung für liquide Altcoins mit eigenständigen virtuellen Paper-Konten à 100 USDT. Spot nur Long; Futures Long/Short. Keine trainierte KI, keine echten Orders. Keine Garantie für zukünftige Kursausbrüche.</p>
-<p><a href="altcoin_radar_3_0.html" target="_blank" rel="noopener noreferrer">Radar als eigene Seite öffnen</a></p>
-<iframe title="Lab 3.0 · Altcoin Breakout Radar" src="altcoin_radar_3_0.html" loading="lazy" style="display:block;width:100%;height:800px;border:1px solid #52627a;border-radius:10px;background:#101827"></iframe>
-</section>
-<!-- ALTCOIN_RADAR_3_0_END -->
-</body></html>
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BTC · KI Ökosystem | Paper-Forward</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#141d30;--panel2:#1a263b;--line:#29364c;--text:#edf3fa;--muted:#9cabc0;--a:#4ed3bd;--b:#8d9dff;--bad:#ff7f91;--warn:#e8bf6e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,'Segoe UI',sans-serif}
+header{border-bottom:1px solid var(--line);background:#10192a;position:sticky;top:0;z-index:4}
+.top{max-width:1510px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-size:21px;font-weight:750;letter-spacing:-.6px}.logo span{color:var(--a)}.subtitle{color:var(--muted);font-size:12px;margin-top:1px}
+.heartbeat{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.dot{width:9px;height:9px;border-radius:100%;background:var(--warn)}.dot.ok{background:var(--a)}.dot.danger{background:var(--bad)}
+main{max-width:1510px;margin:auto;padding:22px 24px 60px}
+.note{background:#152236;border:1px solid #34425a;border-radius:11px;padding:12px 15px;margin-bottom:20px;color:#b9c8d9;font-size:13px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0 12px}h2{font-size:17px;font-weight:700;margin:0}h3{margin:0 0 12px;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:12px}
+.card,.panel{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:17px}
+.card .lbl{font-size:12px;color:var(--muted);min-height:34px}.card .number{font-size:29px;font-weight:730;letter-spacing:-.9px;margin-top:7px;font-variant-numeric:tabular-nums}.card .sub{font-size:12px;color:var(--muted)}
+.good{color:var(--a)!important}.bad{color:var(--bad)!important}.muted{color:var(--muted)!important}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:14px}
+.legend{display:flex;gap:16px;color:var(--muted);font-size:12px;align-items:center}.key{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}.key.a{background:var(--a)}.key.b{background:var(--b)}
+svg{display:block;width:100%;height:auto}#netchart{min-height:230px}#curve{min-height:230px}
+.barbox{max-height:330px;overflow:auto}.bars{display:grid;grid-template-columns:80px 1fr 68px;gap:6px 10px;align-items:center;margin:10px 0;font-size:12px}.track{height:13px;border-radius:4px;background:#0b1425;overflow:hidden;position:relative}.fill{height:100%;border-radius:3px;min-width:1px}.fill.a{background:var(--a)}.fill.b{background:var(--b)}
+.tablewrap{overflow:auto;max-height:650px;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th{position:sticky;top:0;background:#1e2a40;color:#a9b9cb;text-align:right;font-size:11px;letter-spacing:.2px;padding:12px 11px;z-index:1;cursor:pointer}th:first-child,td:first-child{text-align:left}td{padding:11px;border-top:1px solid #27334a;text-align:right;font-variant-numeric:tabular-nums}tbody tr{cursor:pointer}tbody tr:hover,tbody tr.selected{background:#20334b}
+.controls{display:flex;gap:10px;flex-wrap:wrap}input,select{border:1px solid #3b4b64;border-radius:8px;background:#172439;color:var(--text);padding:9px 11px;min-width:150px}input{width:210px}button{border:1px solid #445673;border-radius:8px;background:#233451;color:#e4edfb;padding:8px 12px;cursor:pointer}button:hover{background:#304769}
+#detail{margin-top:14px} .detailnums{display:grid;grid-template-columns:repeat(4,minmax(100px,1fr));gap:10px}.detailnum{background:#111c30;border:1px solid var(--line);padding:12px;border-radius:10px}.detailnum .name{color:var(--muted);font-size:11px}.detailnum .val{font-size:19px;font-weight:650}
+.empty{padding:34px 16px;text-align:center;color:var(--muted)}.small{font-size:12px;color:var(--muted)}.splitline{height:1px;background:var(--line);margin:15px 0}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(3,minmax(150px,1fr))}}@media(max-width:730px){.top,main{padding-left:13px;padding-right:13px}.cards{grid-template-columns:repeat(2,minmax(120px,1fr))}.two{grid-template-columns:1fr}.detailnums{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header><div class="top"><div><div class="logo">BTC <span>ÖKOSYSTEM</span> <span style="color:#7688a3">/ Paper Forward</span></div><div class="subtitle">60 Kandidaten · Lernende Kopien vs. eingefrorene Originale · nur Paper-Simulation</div></div><div class="heartbeat"><span id="indicator" class="dot"></span><span id="heartbeat">Verbindung wird geprüft …</span><button id="reload">Jetzt aktualisieren</button></div></div></header>
+<main>
+<div class="note" id="notice">Die Anzeige liest lokale Ergebnisse. Bestehende Beobachter laufen getrennt weiter. Keine echten Orders und keine nachträgliche Auswahl der Gewinner.</div>
+<div class="sectionhead"><h2>Überblick</h2><span class="small" id="asof">Warte auf Daten …</span></div>
+<div class="cards">
+<div class="card"><div class="lbl">Überwachte Gehirnpaare</div><div id="num-pairs" class="number">–</div><div class="sub">lernend + eingefroren</div></div>
+<div class="card"><div class="lbl">Abgeschlossene Trades · lernend</div><div id="num-adaptive" class="number">–</div><div class="sub">alle 30 Kandidaten</div></div>
+<div class="card"><div class="lbl">Abgeschlossene Trades · eingefroren</div><div id="num-frozen" class="number">–</div><div class="sub">gleicher Vergleichszeitraum</div></div>
+<div class="card"><div class="lbl">Weiterlern-Updates insgesamt</div><div id="num-updates" class="number">–</div><div class="sub">SGD-Trainingsschritte</div></div>
+<div class="card"><div class="lbl">Kopien besser als Original</div><div id="num-better" class="number">–</div><div class="sub">Rendite nach simulierten Kosten</div></div>
+</div>
+<div class="two">
+<div class="panel"><h3>Rendite nach Gehirnpaar</h3><div class="legend"><span><i class="key a"></i>Weiterlernend</span><span><i class="key b"></i>Eingefroren</span></div><div class="small">Historische Auswahlrenditen werden hier nicht angezeigt.</div><div id="barplot" class="barbox"></div></div>
+<div class="panel"><h3>Simulierter Verlauf der abgeschlossenen Trades</h3><div class="legend"><span><i class="key a"></i>Weiterlernend</span><span><i class="key b"></i>Eingefroren</span></div><div class="small">Kumulierte Nettobasispunkte je Trade; zur Veranschaulichung aller Kandidaten, keine Portfolio-Rendite.</div><div id="curveplot"></div></div>
+</div>
+<div class="sectionhead"><h2>Alle Kandidatenpaare</h2><div class="controls"><input id="search" placeholder="Gehirn-ID oder Modellfamilie"><select id="filter"><option value="all">Alle Gehirne</option><option value="active">Mit Paper-Trades</option><option value="better">Lernend besser</option><option value="worse">Eingefroren besser</option><option value="updating">Mit Lern-Updates</option></select></div></div>
+<div class="tablewrap"><table><thead><tr><th data-sort="key">Gehirn</th><th data-sort="family">Modellfamilie</th><th data-sort="adaptive_net_pct">Lernend %</th><th data-sort="frozen_net_pct">Eingefroren %</th><th data-sort="difference_pp">Differenz pp</th><th data-sort="adaptive_trades">Lern-Trades</th><th data-sort="frozen_trades">Frozen-Trades</th><th data-sort="online_updates">SGD-Updates</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div id="detail" class="panel"><h3>Kandidatendetails</h3><div class="small">Klicke auf eine Zeile, um einzelne Gehirne und ihre abgeschlossenen Trades zu vergleichen.</div></div>
+<div class="sectionhead"><h2>Datenquellen und Methodik</h2></div>
+<div class="panel" id="sources"><div class="small">Prüfe lokale Beobachter …</div></div>
+<div class="small" style="margin-top:18px">Lokal auf diesem Rechner · nur lesender Zugriff · automatische Aktualisierung alle 30 Sekunden · kein Handel, keine Modelländerungen.</div>
+</main>
+<script>
+const $=x=>document.getElementById(x);let state=null,sortKey='difference_pp',sortAsc=false,chosen=null;
+const n=(v,d=2)=>Number.isFinite(Number(v))?Number(v).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d}):'–';
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cls=v=>Number(v)>0?'good':Number(v)<0?'bad':'muted';
+const p=v=>(Number(v)>0?'+':'')+n(v)+' %';
+function humanDate(v){if(!v)return '–';const d=new Date(v);return Number.isNaN(d.getTime())?String(v):d.toLocaleString('de-DE',{timeZone:'Europe/Berlin',dateStyle:'short',timeStyle:'medium'})+' MEZ/MESZ'}
+function metric(el,v,d=0){$(el).textContent=n(v,d)}
+function graph(rows){
+if(!rows.length){$('barplot').innerHTML='<div class="empty">Noch keine Vergleiche verfügbar</div>';return}
+const ranked=[...rows].sort((a,b)=>Math.max(Math.abs(b.adaptive_net_pct||0),Math.abs(b.frozen_net_pct||0))-Math.max(Math.abs(a.adaptive_net_pct||0),Math.abs(a.frozen_net_pct||0))).slice(0,20);
+const mx=Math.max(1,...ranked.map(x=>Math.max(Math.abs(x.adaptive_net_pct||0),Math.abs(x.frozen_net_pct||0))));
+$('barplot').innerHTML=ranked.map(r=>{const key=r.section+'/'+r.agent_id;return `<div class="bars"><span>${esc(key)}</span><div><div class="track" style="margin-bottom:3px"><div class="fill a" style="width:${Math.min(100,Math.abs(Number(r.adaptive_net_pct)||0)/mx*100)}%"></div></div><div class="track"><div class="fill b" style="width:${Math.min(100,Math.abs(Number(r.frozen_net_pct)||0)/mx*100)}%"></div></div></div><span class="${cls(r.adaptive_net_pct)}">${esc(p(r.adaptive_net_pct))}</span></div>`}).join('');
+}
+function lineChart(seriesA,seriesB){
+const width=700,height=260,left=52,right=12,top=15,bottom=35;
+const arr=[...seriesA.map(z=>Number(z.net_bp)||0),...seriesB.map(z=>Number(z.net_bp)||0)];
+function cumulative(data){let s=0;const points=[0];for(const row of data){s+=Number(row.net_bp)||0;points.push(s)}return points}
+const a=cumulative(seriesA),b=cumulative(seriesB),all=[...a,...b];const hi=Math.max(20,...all),lo=Math.min(-20,...all);
+const y=v=>top+(hi-v)/(hi-lo)*(height-top-bottom),maxn=Math.max(1,a.length-1,b.length-1),x=i=>left+(i/maxn)*(width-left-right);
+const path=v=>v.map((z,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(z).toFixed(1)).join(' ');
+return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Kumulierte Trade-Ergebnisse"><line x1="${left}" y1="${y(0)}" x2="${width-right}" y2="${y(0)}" stroke="#42516b" stroke-dasharray="4 4"/>${[0,.5,1].map(z=>{let value=lo+(hi-lo)*z;return `<line x1="${left}" y1="${y(value)}" x2="${width-right}" y2="${y(value)}" stroke="#2b3950"/><text x="${left-8}" y="${y(value)+4}" font-size="11" fill="#9cabc0" text-anchor="end">${Math.round(value)}</text>`}).join('')}<path d="${path(a)}" stroke="#4ed3bd" fill="none" stroke-width="2.5"/><path d="${path(b)}" stroke="#8d9dff" fill="none" stroke-width="2.5"/><text x="${left}" y="${height-8}" fill="#9cabc0" font-size="11">0</text><text x="${width-right}" y="${height-8}" text-anchor="end" fill="#9cabc0" font-size="11">${maxn} Trades</text><text x="${left}" y="12" fill="#9cabc0" font-size="11">Netto-Basispunkte (aufsummiert)</text></svg>`;
+}
+function rowsFiltered(){if(!state||!state.pairs)return [];const search=$('search').value.toLowerCase().trim(),filter=$('filter').value;
+return [...state.pairs].filter(r=>{const key=`${r.section}/${r.agent_id}`;if(search&&!`${key} ${r.family} ${r.agent_id}`.toLowerCase().includes(search))return false;
+if(filter==='active'&&!(r.adaptive_trades>0||r.frozen_trades>0))return false;
+if(filter==='better'&&!(r.difference_pp>0))return false;
+if(filter==='worse'&&!(r.difference_pp<0))return false;
+if(filter==='updating'&&!(r.online_updates>0))return false;return true}).sort((a,b)=>{const av=sortKey==='key'?`${a.section}/${a.agent_id}`:a[sortKey],bv=sortKey==='key'?`${b.section}/${b.agent_id}`:b[sortKey];let cmp=typeof av==='string'?String(av).localeCompare(String(bv),'de',{numeric:true}):Number(av||0)-Number(bv||0);return sortAsc?cmp:-cmp})}
+function table(){const rows=rowsFiltered();$('rows').innerHTML=rows.length?rows.map(r=>{const k=r.section+'/'+r.agent_id;return `<tr class="${chosen===k?'selected':''}" data-key="${esc(k)}"><td>${esc(k)}</td><td>${esc(r.family)}</td><td class="${cls(r.adaptive_net_pct)}">${esc(p(r.adaptive_net_pct))}</td><td class="${cls(r.frozen_net_pct)}">${esc(p(r.frozen_net_pct))}</td><td class="${cls(r.difference_pp)}">${r.difference_pp>0?'+':''}${n(r.difference_pp)} pp</td><td>${n(r.adaptive_trades,0)}</td><td>${n(r.frozen_trades,0)}</td><td>${n(r.online_updates,0)}</td></tr>`}).join(''):'<tr><td colspan="8" style="text-align:center;padding:25px;color:#9cabc0">Keine Kandidaten für diesen Filter</td></tr>';document.querySelectorAll('#rows tr[data-key]').forEach(x=>x.addEventListener('click',()=>{chosen=x.dataset.key;table();details()}))}
+function details(){const r=(state?.pairs||[]).find(x=>`${x.section}/${x.agent_id}`===chosen);if(!r){$('detail').innerHTML='<h3>Kandidatendetails</h3><div class="small">Wähle ein Gehirn aus der Tabelle.</div>';return}
+const f=x=>`<div class="detailnum"><div class="name">${x[0]}</div><div class="val ${x[2]||''}">${x[1]}</div></div>`;
+const a=(state.adaptive_trades||[]).filter(t=>t.section==r.section&&t.agent_id==r.agent_id).sort((a,b)=>String(b.exit_utc).localeCompare(String(a.exit_utc))).slice(0,15);
+const b=(state.frozen_trades||[]).filter(t=>t.section==r.section&&t.agent_id==r.agent_id).sort((a,b)=>String(b.exit_utc).localeCompare(String(a.exit_utc))).slice(0,15);
+function trades(title,items){return `<h3 style="margin-top:18px">${title}</h3>`+(items.length?`<div class="tablewrap" style="max-height:320px"><table><thead><tr><th>Einstieg</th><th>Ausstieg</th><th>Richtung</th><th>Netto bp</th></tr></thead><tbody>${items.map(x=>`<tr><td>${esc(humanDate(x.entry_utc))}</td><td>${esc(humanDate(x.exit_utc))}</td><td>${esc(x.direction)}</td><td class="${cls(x.net_bp)}">${n(x.net_bp)}</td></tr>`).join('')}</tbody></table></div>`:'<div class="small">Noch keine abgeschlossenen Trades.</div>')}
+$('detail').innerHTML=`<h3>Gehirn ${esc(r.section)}/${esc(r.agent_id)} · ${esc(r.family)}</h3><div class="detailnums">${f(['Lernend',p(r.adaptive_net_pct),cls(r.adaptive_net_pct)])}${f(['Eingefroren',p(r.frozen_net_pct),cls(r.frozen_net_pct)])}${f(['Differenz',(r.difference_pp>0?'+':'')+n(r.difference_pp)+' pp',cls(r.difference_pp)])}${f(['SGD-Updates',n(r.online_updates,0)])}</div><div class="small" style="margin-top:10px">Lern-Trades: ${n(r.adaptive_trades,0)} · Frozen-Trades: ${n(r.frozen_trades,0)} · Gewichtsanpassungen: ${n(r.weight_updates,0)} · Lern-Position offen: ${r.adaptive_position_open?'ja':'nein'}</div><div class="two"> <div>${trades('Lernende Kopie – letzte Trades',a)}</div><div>${trades('Eingefrorenes Original – letzte Trades',b)}</div></div>`;
+}
+function draw(data){state=data;const pairs=data.pairs||[],as=data.adaptive||{},fs=data.frozen||{};
+metric('num-pairs',pairs.length);metric('num-adaptive',as.adaptive_trades??0);metric('num-frozen',as.frozen_trades??0);metric('num-updates',as.total_online_updates??0);metric('num-better',pairs.filter(p=>p.difference_pp>0).length);
+$('asof').textContent='Letzter gespeicherter Kerzenstand: '+humanDate(as.last_closed_candle_open_utc||fs.last_closed_candle_open_utc);
+const ages=[data.age_adaptive_min,data.age_frozen_min].filter(v=>Number.isFinite(v));const stale=ages.some(v=>v>50);$('indicator').className='dot '+(stale?'danger':'ok');$('heartbeat').textContent=stale?'Daten möglicherweise veraltet':'GitHub-Daten verfügbar';
+$('notice').textContent=stale?'Achtung: Mindestens ein Beobachter hat seit über 50 Minuten keine neu verarbeitete Kerze gespeichert. Bitte CMD-Fenster und Datenabruf kontrollieren.':'Öffentliche Anzeige · Nur simulierte Trades. Der faire Paarvergleich beginnt ab '+humanDate(as.forward_start_utc)+'; frühere Backtest-Renditen sind ausgeschlossen.';
+$('sources').innerHTML=`<div><b>Gemeinsamer Vergleichsstart:</b> ${esc(humanDate(as.forward_start_utc))}</div><div><b>Lernender Beobachter:</b> Kerze ${esc(humanDate(as.last_closed_candle_open_utc))}</div><div><b>Eingefrorener Beobachter:</b> Kerze ${esc(humanDate(fs.last_closed_candle_open_utc))}</div><div class="splitline"></div><div class="small">Die Paar-Renditen stammen aus dem lernenden Beobachter, der beide Gruppen ab demselben Zeitpunkt neu berechnet. Der einzelne Frozen-Beobachter hat einen eigenen, eventuell früheren Beobachtungsstart. Renditen sind Einzelmodell-Simulationen, kein investierbares Portfolio. Handelsgebühren/Slippage hängen von den Einstellungen der Beobachter ab. Veränderungen und Trade-Differenzen sind noch kein Nachweis einer verallgemeinerbaren Prognosefähigkeit.</div>`;
+graph(pairs);$('curveplot').innerHTML=lineChart(data.adaptive_trades||[],data.frozen_trades||[]);table();details();
+}
+async function update(){try{const response=await fetch('data/forward.json?ts='+Date.now(),{cache:'no-store'});const data=await response.json();if(!response.ok)throw Error(data.error||'Unbekannter Fehler');draw(data);$('heartbeat').title='Letzte Dashboard-Abfrage: '+new Date().toLocaleTimeString('de-DE');}catch(err){$('indicator').className='dot danger';$('heartbeat').textContent='Daten noch nicht verfügbar';$('notice').textContent='Hinweis: '+err.message+' · Die Beobachter arbeiten unabhängig vom Dashboard weiter.';}}
+$('reload').onclick=update;$('search').oninput=table;$('filter').onchange=table;document.querySelectorAll('th[data-sort]').forEach(t=>t.onclick=()=>{const k=t.dataset.sort;if(sortKey===k)sortAsc=!sortAsc;else{sortKey=k;sortAsc=false}table()});update();setInterval(update,30000);
+</script></body></html>
