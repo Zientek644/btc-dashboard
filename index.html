@@ -38,7 +38,7 @@ svg{display:block;width:100%;height:auto}#netchart{min-height:230px}#curve{min-h
 </div>
 <div class="two">
 <div class="panel"><h3>Rendite nach Gehirnpaar</h3><div class="legend"><span><i class="key a"></i>Weiterlernend</span><span><i class="key b"></i>Eingefroren</span></div><div class="small">Historische Auswahlrenditen werden hier nicht angezeigt.</div><div id="barplot" class="barbox"></div></div>
-<div class="panel"><h3>Simulierter Verlauf der abgeschlossenen Trades (bisherige Gruppe)</h3><div class="legend"><span><i class="key a"></i>Weiterlernend</span><span><i class="key b"></i>Eingefroren</span></div><div class="small">Kumulierte Nettobasispunkte je Trade; zur Veranschaulichung aller Kandidaten, keine Portfolio-Rendite.</div><div id="curveplot"></div></div>
+<div class="panel"><h3>Vereinfachte Portfolio-Equity aus abgeschlossenen Trades</h3><div class="legend"><span><i class="key a"></i>Weiterlernend</span><span><i class="key b"></i>Eingefroren</span></div><div class="small">Startwert 100 · kein Hebel · pro gleichem Ausstiegszeitpunkt wird der Durchschnitt der Netto-Basispunkte aller dort geschlossenen Trades verwendet. So lässt sich die Gesamtrichtung besser erkennen; offene Positionen und exakte Kapitalgewichtungen sind nicht enthalten.</div><div id="curveplot"></div></div>
 </div>
 <div class="sectionhead"><h2>Alle Kandidatenpaare</h2><div class="controls"><input id="search" placeholder="Gehirn-ID oder Modellfamilie"><select id="filter"><option value="all">Alle Gehirne</option><option value="active">Mit Paper-Trades</option><option value="better">Lernend besser</option><option value="worse">Eingefroren besser</option><option value="updating">Mit Lern-Updates</option><option value="existing">Bisherige 30 Paare</option><option value="research20">Neue Forschung 20 Paare</option><option value="research05_10">Abschnitt 005 · 10 Paare</option><option value="research06_10">Abschnitt 006 · erste 10 Paare</option><option value="research06_23">Abschnitt 006 · weitere 23 Paare</option></select></div></div>
 <div class="tablewrap"><table><thead><tr><th data-sort="cohort">Gruppe</th><th data-sort="key">Gehirn</th><th data-sort="family">Modellfamilie</th><th data-sort="adaptive_net_pct">Lernend %</th><th data-sort="frozen_net_pct">Eingefroren %</th><th data-sort="difference_pp">Differenz pp</th><th data-sort="adaptive_trades">Lern-Trades</th><th data-sort="frozen_trades">Frozen-Trades</th><th data-sort="online_updates">SGD-Updates</th></tr></thead><tbody id="rows"></tbody></table></div>
@@ -61,14 +61,32 @@ const ranked=[...rows].sort((a,b)=>(Number(b.adaptive_net_pct)||0)-(Number(a.ada
 const mx=Math.max(1,...ranked.map(x=>Math.max(Math.abs(x.adaptive_net_pct||0),Math.abs(x.frozen_net_pct||0))));
 $('barplot').innerHTML=ranked.map(r=>{const key=r.section+'/'+r.agent_id;return `<div class="bars"><span>${esc(key)}</span><div><div class="track" style="margin-bottom:3px"><div class="fill a" style="width:${Math.min(100,Math.abs(Number(r.adaptive_net_pct)||0)/mx*100)}%"></div></div><div class="track"><div class="fill b" style="width:${Math.min(100,Math.abs(Number(r.frozen_net_pct)||0)/mx*100)}%"></div></div></div><span class="${cls(r.adaptive_net_pct)}">${esc(p(r.adaptive_net_pct))}</span></div>`}).join('');
 }
-function lineChart(seriesA,seriesB){
+function equityEvents(trades){
+const grouped=new Map();
+[...trades].filter(t=>t&&t.exit_utc).sort((a,b)=>String(a.exit_utc).localeCompare(String(b.exit_utc))).forEach(t=>{
+  const k=String(t.exit_utc);
+  const arr=grouped.get(k)||[];
+  arr.push(Number(t.net_bp)||0);
+  grouped.set(k,arr);
+});
+return [...grouped.entries()].map(([ts,vals])=>({ts,avg_bp:vals.reduce((s,v)=>s+v,0)/Math.max(1,vals.length),count:vals.length}))
+  .sort((a,b)=>String(a.ts).localeCompare(String(b.ts)));
+}
+function equitySeries(trades){
+ const events=equityEvents(trades);let eq=100;const out=[{value:eq,ts:null,count:0,avg_bp:0}];
+ for(const e of events){eq*=1+(Number(e.avg_bp)||0)/10000;out.push({value:eq,ts:e.ts,count:e.count,avg_bp:e.avg_bp});}
+ return out;
+}
+function equityChart(seriesA,seriesB){
 const width=700,height=260,left=52,right=12,top=15,bottom=35;
-const arr=[...seriesA.map(z=>Number(z.net_bp)||0),...seriesB.map(z=>Number(z.net_bp)||0)];
-function cumulative(data){let s=0;const points=[0];for(const row of data){s+=Number(row.net_bp)||0;points.push(s)}return points}
-const a=cumulative(seriesA),b=cumulative(seriesB),all=[...a,...b];const hi=Math.max(20,...all),lo=Math.min(-20,...all);
-const y=v=>top+(hi-v)/(hi-lo)*(height-top-bottom),maxn=Math.max(1,a.length-1,b.length-1),x=i=>left+(i/maxn)*(width-left-right);
-const path=v=>v.map((z,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(z).toFixed(1)).join(' ');
-return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Kumulierte Trade-Ergebnisse"><line x1="${left}" y1="${y(0)}" x2="${width-right}" y2="${y(0)}" stroke="#42516b" stroke-dasharray="4 4"/>${[0,.5,1].map(z=>{let value=lo+(hi-lo)*z;return `<line x1="${left}" y1="${y(value)}" x2="${width-right}" y2="${y(value)}" stroke="#2b3950"/><text x="${left-8}" y="${y(value)+4}" font-size="11" fill="#9cabc0" text-anchor="end">${Math.round(value)}</text>`}).join('')}<path d="${path(a)}" stroke="#4ed3bd" fill="none" stroke-width="2.5"/><path d="${path(b)}" stroke="#8d9dff" fill="none" stroke-width="2.5"/><text x="${left}" y="${height-8}" fill="#9cabc0" font-size="11">0</text><text x="${width-right}" y="${height-8}" text-anchor="end" fill="#9cabc0" font-size="11">${maxn} Trades</text><text x="${left}" y="12" fill="#9cabc0" font-size="11">Netto-Basispunkte (aufsummiert)</text></svg>`;
+const a=equitySeries(seriesA),b=equitySeries(seriesB),all=[...a.map(z=>z.value),...b.map(z=>z.value),100];
+const hi=Math.max(...all),lo=Math.min(...all);const pad=Math.max(0.35,(hi-lo)*0.08);
+const topVal=hi+pad,bottomVal=lo-pad;
+const y=v=>top+(topVal-v)/(topVal-bottomVal)*(height-top-bottom),maxn=Math.max(1,a.length-1,b.length-1),x=i=>left+(i/maxn)*(width-left-right);
+const path=v=>v.map((z,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(z.value).toFixed(1)).join(' ');
+const ticks=[bottomVal,(bottomVal+topVal)/2,topVal];
+const lastA=a[a.length-1]?.value??100,lastB=b[b.length-1]?.value??100;
+return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Vereinfachte Portfolio-Equity"><line x1="${left}" y1="${y(100)}" x2="${width-right}" y2="${y(100)}" stroke="#42516b" stroke-dasharray="4 4"/>${ticks.map(value=>`<line x1="${left}" y1="${y(value)}" x2="${width-right}" y2="${y(value)}" stroke="#2b3950"/><text x="${left-8}" y="${y(value)+4}" font-size="11" fill="#9cabc0" text-anchor="end">${n(value)}</text>`).join('')}<path d="${path(a)}" stroke="#4ed3bd" fill="none" stroke-width="2.5"/><path d="${path(b)}" stroke="#8d9dff" fill="none" stroke-width="2.5"/><text x="${left}" y="${height-8}" fill="#9cabc0" font-size="11">Start</text><text x="${width-right}" y="${height-8}" text-anchor="end" fill="#9cabc0" font-size="11">${maxn} Ereignisse</text><text x="${left}" y="12" fill="#9cabc0" font-size="11">Portfolio-Index (Start 100) · lernend ${n(lastA)} · eingefroren ${n(lastB)}</text></svg>`;
 }
 function rowsFiltered(){if(!state||!state.pairs)return [];const search=$('search').value.toLowerCase().trim(),filter=$('filter').value;
 return [...state.pairs].filter(r=>{const key=`${r.section}/${r.agent_id}`;if(search&&!`${key} ${r.family} ${r.agent_id}`.toLowerCase().includes(search))return false;
