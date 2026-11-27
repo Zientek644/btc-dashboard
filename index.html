@@ -57,7 +57,7 @@ function humanDate(v){if(!v)return '–';const d=new Date(v);return Number.isNaN
 function metric(el,v,d=0){$(el).textContent=n(v,d)}
 function graph(rows){
 if(!rows.length){$('barplot').innerHTML='<div class="empty">Noch keine Vergleiche verfügbar</div>';return}
-const ranked=[...rows].sort((a,b)=>Math.max(Math.abs(b.adaptive_net_pct||0),Math.abs(b.frozen_net_pct||0))-Math.max(Math.abs(a.adaptive_net_pct||0),Math.abs(a.frozen_net_pct||0))).slice(0,20);
+const ranked=[...rows].sort((a,b)=>(Number(b.adaptive_net_pct)||0)-(Number(a.adaptive_net_pct)||0));
 const mx=Math.max(1,...ranked.map(x=>Math.max(Math.abs(x.adaptive_net_pct||0),Math.abs(x.frozen_net_pct||0))));
 $('barplot').innerHTML=ranked.map(r=>{const key=r.section+'/'+r.agent_id;return `<div class="bars"><span>${esc(key)}</span><div><div class="track" style="margin-bottom:3px"><div class="fill a" style="width:${Math.min(100,Math.abs(Number(r.adaptive_net_pct)||0)/mx*100)}%"></div></div><div class="track"><div class="fill b" style="width:${Math.min(100,Math.abs(Number(r.frozen_net_pct)||0)/mx*100)}%"></div></div></div><span class="${cls(r.adaptive_net_pct)}">${esc(p(r.adaptive_net_pct))}</span></div>`}).join('');
 }
